@@ -29,23 +29,27 @@ public class Methods {
     }
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        System.out.println("Successfully Cliked the locator "+locator);
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
+        System.out.println(value+" Is entered");
     }
     public void URLvalidator(String value){
         String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
     }
-    public void promoChecker(By locator, String value){
+    public void checkIfAdded(By locator, String value){
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = promoName.getText();
         Assert.assertEquals(actual,value);
+     System.out.println(value+" Is added successfully");
     }
     public void InlineErrorValidator(By locator, String expectedValue) {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
+        System.out.println(expectedValue+" Is showing");
     }
     public void SuccessValidator(By locator, String expectedValue) {
         WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

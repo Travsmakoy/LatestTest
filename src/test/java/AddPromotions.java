@@ -22,7 +22,7 @@ public class AddPromotions extends Methods {
     }
     @Test(priority = 4)
     public void verifyExistPromo(){
-        promoChecker(By.xpath("//*[@id=\"__next\"]/div/main/div/div[2]/div[2]/div/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[3]"),"MarkyAutomation");
+        checkIfAdded(By.xpath("//*[@id=\"__next\"]/div/main/div/div[2]/div[2]/div/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[3]"),"MarkyAutomation");
     }
     @Test(priority = 5)
     public void verifyDelete(){
