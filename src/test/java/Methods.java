@@ -38,6 +38,7 @@ public class Methods {
     public void URLvalidator(String value){
         String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
+        System.out.println("You are in correct URL "+value);
     }
     public void checkIfAdded(By locator, String value){
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
