@@ -26,6 +26,7 @@ public class Methods {
         if (driver != null) {
             Thread.sleep(3000);
             driver.quit();
+
         }
     }
 
