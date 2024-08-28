@@ -50,8 +50,6 @@ public class Methods {
         Assert.assertEquals(actual, expectedValue);
     }
 
-
-
     private void scrollPage(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
