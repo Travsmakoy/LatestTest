@@ -30,7 +30,6 @@ public class Methods {
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
-
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
     }
@@ -57,8 +56,11 @@ public class Methods {
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(num));
     }
-    private void scrollPage(int pixels) {
+    public void scrollPage(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
+    }
+    public void sleepThread(int num) throws InterruptedException {
+        Thread.sleep(num);
     }
 }
