@@ -26,14 +26,11 @@ public class Methods {
         if (driver != null) {
             Thread.sleep(3000);
             driver.quit();
-
         }
     }
-
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
-
     public void clicksend(By locator, String value) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
     }
