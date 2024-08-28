@@ -29,11 +29,11 @@ public class Methods {
     }
     public void click(By locator) {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-        System.out.println("Successfully Cliked the locator "+locator);
+        System.out.println("Successfully Clicked the locator "+locator);
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
-        System.out.println(value+" Is entered");
+        System.out.println(value+" Is entered successfully");
     }
     public void URLvalidator(String value){
         String ExpectedURL = value;
@@ -43,7 +43,7 @@ public class Methods {
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = promoName.getText();
         Assert.assertEquals(actual,value);
-     System.out.println(value+" Is added successfully");
+     System.out.println(value+" is showing after adding");
     }
     public void InlineErrorValidator(By locator, String expectedValue) {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
