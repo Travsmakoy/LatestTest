@@ -24,7 +24,7 @@ public class Methods {
     public void tearDownSuite() throws InterruptedException {
         // Quit the WebDriver instance
         if (driver != null) {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             driver.quit();
         }
     }
