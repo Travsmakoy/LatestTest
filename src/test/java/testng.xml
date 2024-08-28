@@ -7,8 +7,8 @@
             <class name="ClickDashboard"/>
             <class name="Login"/>
             <class name="AddPromotions"/>
-            <class name="SubsUpdateProject"></class>
-            <class name="AddHolidayHomes"></class>
+            <class name="SubsUpdateProject"/>
+            <class name="AddHolidayHomes"/>
         </classes>
     </test>
 </suite>
