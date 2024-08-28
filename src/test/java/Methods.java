@@ -39,6 +39,11 @@ public class Methods {
         String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
     }
+    public void promoChecker(By locator, String value){
+        WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        String actual = promoName.getText();
+        Assert.assertEquals(actual,value);
+    }
     public void InlineErrorValidator(By locator, String expectedValue) {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = inlineError.getText();
