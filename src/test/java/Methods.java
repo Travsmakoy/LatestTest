@@ -19,7 +19,7 @@ public class Methods {
     @BeforeSuite
     public void setUpSuite() {
         driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
@@ -30,7 +30,7 @@ public class Methods {
         }
     }
     public void click(By locator) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
     public void clicksend(By locator, String value) {
