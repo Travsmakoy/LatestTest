@@ -1,9 +1,9 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class OpenSite extends Methods {
+public class startExecute extends Methods {
     @Test
-    public void VerifyURL(){
+    public void VerifyAqarySite(){
     driver.get("https://dashboard.aqaryint.com");
     URLvalidator("https://dashboard.aqaryint.com/");
 }
