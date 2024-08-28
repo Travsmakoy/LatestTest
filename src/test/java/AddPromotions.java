@@ -21,4 +21,10 @@ public class AddPromotions extends Methods {
         click(By.xpath("//button[normalize-space()='Submit']"));
 
     }
+    @Test(priority = 4)
+    public void verifyDelete(){
+        click(By.xpath("//tbody/tr[1]/td[4]/div[1]/button[1]"));
+        click(By.xpath("//button[normalize-space()='Yes']"));
+        SuccessValidator(By.xpath("//div[@class='MuiBox-root css-0']//div[contains(text(),'Promotion Type Deleted successfully.')]"),"Promotion Type Deleted Successfully");
+    }
 }

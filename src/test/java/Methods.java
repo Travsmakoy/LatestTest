@@ -46,6 +46,12 @@ public class Methods {
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
     }
+    public void SuccessValidator(By locator, String expectedValue) {
+        WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        String actual = success.getText();
+        Assert.assertEquals(actual, expectedValue);
+    }
+
 
 
     private void scrollPage(int pixels) {
