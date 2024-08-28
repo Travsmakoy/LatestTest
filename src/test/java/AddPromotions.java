@@ -1,0 +1,24 @@
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class AddPromotions extends Methods {
+    @Test(priority = 1)
+    public void PromotionNavigate(){
+        click(By.xpath("//button[normalize-space()='Projects']"));
+        click(By.xpath("//p[normalize-space()='Promotions']"));
+        URLvalidator("https://dashboard.aqaryint.com/dashboard/project/project_management/promotions");
+    }
+    @Test(priority = 2)
+    public void verifyRequiredField(){
+        click(By.xpath("//button[normalize-space()='Add Promotion Type']"));
+        click(By.xpath("//input[@id='title']"));
+        click(By.xpath("//button[normalize-space()='Submit']"));
+        InlineErrorValidator(By.xpath("/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div/div[3]"),"Please provide a valid promotion type");
+    }
+    @Test(priority = 3)
+    public void verifyAddpromo(){
+        clicksend(By.xpath("//input[@id='title']"),"MarkyAutomation");
+        click(By.xpath("//button[normalize-space()='Submit']"));
+
+    }
+}
