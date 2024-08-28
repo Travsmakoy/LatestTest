@@ -1,12 +1,11 @@
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Login extends Methods{
     @Test(priority = 2)
     public void VerifyLogin() throws InterruptedException {
-        clicksend(By.name("email"),"mark@admin.com");
-        clicksend(By.name("password"),"mark");
+        clickandsend(By.name("email"),"mark@admin.com");
+        clickandsend(By.name("password"),"mark");
         click(By.xpath("//*[@id=\":r0:\"]"));
         Thread.sleep(500);
         URLvalidator("https://dashboard.aqaryint.com/dashboard/default");

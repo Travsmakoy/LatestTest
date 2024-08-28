@@ -17,7 +17,7 @@ public class AddPromotions extends Methods {
     }
     @Test(priority = 3)
     public void verifyAfterAdd(){
-        clicksend(By.xpath("//input[@id='title']"),"MarkyAutomation");
+        clickandsend(By.xpath("//input[@id='title']"),"MarkyAutomation");
         click(By.xpath("//button[normalize-space()='Submit']"));
     }
     @Test(priority = 4)
