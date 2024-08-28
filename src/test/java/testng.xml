@@ -8,6 +8,7 @@
             <class name="Login"/>
             <class name="AddPromotions"/>
             <class name="SubsUpdateProject"></class>
+            <class name="AddHolidayHomes"></class>
         </classes>
     </test>
 </suite>
