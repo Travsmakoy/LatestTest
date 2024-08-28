@@ -9,6 +9,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 public class Methods {
 
@@ -54,7 +55,10 @@ public class Methods {
         String actual = success.getText();
         Assert.assertEquals(actual, expectedValue);
     }
-
+    public void SwitchTab(int num){
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(num));
+    }
     private void scrollPage(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
