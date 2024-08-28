@@ -18,7 +18,7 @@ public class Methods {
     @BeforeSuite
     public void setUpSuite() {
         driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
     @AfterSuite
     public void tearDownSuite() throws InterruptedException {
@@ -29,11 +29,11 @@ public class Methods {
         }
     }
     public void click(By locator) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
     }
 
     public void clicksend(By locator, String value) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).sendKeys(value);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
     }
     public void URLvalidator(String value){
         String ExpectedURL = value;
