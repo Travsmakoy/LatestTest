@@ -16,7 +16,7 @@ public class AddPromotions extends Methods {
         InlineErrorValidator(By.xpath("/html/body/div[2]/div[3]/div/div[2]/div/div[1]/div/div[3]"),"Please provide a valid promotion type");
     }
     @Test(priority = 3)
-    public void verifyAddpromo(){
+    public void verifyAfterAdd(){
         clicksend(By.xpath("//input[@id='title']"),"MarkyAutomation");
         click(By.xpath("//button[normalize-space()='Submit']"));
     }
@@ -28,6 +28,6 @@ public class AddPromotions extends Methods {
     public void verifyDelete(){
         click(By.xpath("//tbody/tr[1]/td[4]/div[1]/button[1]"));
         click(By.xpath("//button[normalize-space()='Yes']"));
-        SuccessValidator(By.xpath("//div[@class='MuiBox-root css-0']//div[contains(text(),'Promotion Type Deleted successfully.')]"),"Promotion Type Deleted Successfully");
+        SuccessValidator(By.xpath("//div[@class='MuiBox-root css-0']//div[contains(text(),'Promotion Type Deleted successfully.')]"),"Promotion Type Deleted Successfully.");
     }
 }
