@@ -7,6 +7,5 @@ public class startExecute extends Methods {
     public void VerifyAqarySite(){
     driver.get("https://dashboard.aqaryint.com");
     URLvalidator("https://dashboard.aqaryint.com/");
-        Allure.step("Test1");
     }
 }
