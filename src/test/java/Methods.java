@@ -28,12 +28,14 @@ public class Methods {
         }
     }
     public void click(By locator) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-        System.out.println("Successfully Clicked the locator "+locator);
+        WebElement click = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        String button = click.getText();
+        click.click();
+        System.out.println("Successfully Clicked "+button);
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
-        System.out.println(value+" Is entered successfully");
+        System.out.println(value+" entered successfully");
     }
     public void URLvalidator(String value){
         String ExpectedURL = value;
@@ -50,7 +52,7 @@ public class Methods {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
-        System.out.println(expectedValue+" Is showing");
+        System.out.println(expectedValue+" is showing");
     }
     public void SuccessValidator(By locator, String expectedValue) {
         WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
