@@ -31,7 +31,7 @@ public class Methods {
         WebElement click = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String button = click.getText();
         click.click();
-        System.out.println("Successfully Clicked "+button);
+        System.out.println("Successfully Clicked "+ "'"+button+"'");
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
