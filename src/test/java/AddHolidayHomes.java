@@ -1,6 +1,4 @@
-import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class AddHolidayHomes extends Methods{

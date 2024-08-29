@@ -1,7 +1,6 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 
 public class ClickDashboard extends Methods {
     @Test
