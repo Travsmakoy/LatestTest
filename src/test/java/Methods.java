@@ -59,7 +59,7 @@ public class Methods {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
-        Allure.step(expectedValue+" is showing");
+        Allure.step(expectedValue+" REQUIRED FIELDS / TOAST Is showing");
     }
     public void SuccessValidator(By locator, String expectedValue) {
         WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
