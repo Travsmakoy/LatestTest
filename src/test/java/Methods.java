@@ -38,6 +38,10 @@ public class Methods {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
         System.out.println(value+" entered successfully");
     }
+    public void doubleClick(By locator,By locator1){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator1)).click();
+    }
     public void URLvalidator(String value){
         String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
@@ -70,5 +74,9 @@ public class Methods {
     }
     public void sleepThread(int num) throws InterruptedException {
         Thread.sleep(num);
+    }
+    public void cleafield(By locator){
+        WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        clear.clear();
     }
 }
