@@ -25,6 +25,7 @@ public class Methods {
         if (driver != null) {
             Thread.sleep(2000);
             driver.quit();
+            System.out.println("ALL TEST COMPLETE");
         }
     }
     public void click(By locator) {
