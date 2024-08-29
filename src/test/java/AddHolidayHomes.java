@@ -30,5 +30,6 @@ public void addExp(){
     clickandsend(By.xpath("//input[@id='no_of_hours']"),"10");
     clickandsend(By.xpath("//input[@id='price_person']"),"500");
     doubleClick(By.xpath("//input[@id='experience_package']"),By.xpath("//li[@id='experience_package-option-0']"));
+    scrollPage(550);
 }
 }

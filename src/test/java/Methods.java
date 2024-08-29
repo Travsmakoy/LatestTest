@@ -1,3 +1,4 @@
+import io.qameta.allure.Allure;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,6 +18,7 @@ public class Methods {
     @BeforeSuite
     public void setUpSuite() {
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     @AfterSuite
@@ -32,11 +34,11 @@ public class Methods {
         WebElement click = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String button = click.getText();
         click.click();
-        System.out.println("Successfully Clicked "+ "'"+button+"'");
+        Allure.step("Successfully Clicked "+ "'"+button+"'");;
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
-        System.out.println(value+" entered successfully");
+        Allure.step(value+" entered successfully");
     }
     public void doubleClick(By locator,By locator1){
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
@@ -45,19 +47,19 @@ public class Methods {
     public void URLvalidator(String value){
         String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
-        System.out.println("You are in correct URL "+value);
+        Allure.step("You are in correct URL "+value);
     }
     public void checkIfAdded(By locator, String value){
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = promoName.getText();
         Assert.assertEquals(actual,value);
-     System.out.println(value+" is showing after adding");
+        Allure.step(value+" is showing after adding");
     }
     public void InlineErrorValidator(By locator, String expectedValue) {
         WebElement inlineError = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = inlineError.getText();
         Assert.assertEquals(actual, expectedValue);
-        System.out.println(expectedValue+" is showing");
+        Allure.step(expectedValue+" is showing");
     }
     public void SuccessValidator(By locator, String expectedValue) {
         WebElement success = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
