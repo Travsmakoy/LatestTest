@@ -7,7 +7,7 @@ public class Login extends Methods{
         clickandsend(By.name("email"),"mark@admin.com");
         clickandsend(By.name("password"),"mark");
         click(By.xpath("//*[@id=\":r0:\"]"));
-        sleepThread(500);
+        sleepThread(250);
         URLvalidator("https://dashboard.aqaryint.com/dashboard/default");
     }
     @Test(priority = 1)
