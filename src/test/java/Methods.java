@@ -17,6 +17,7 @@ public class Methods {
 
     @BeforeSuite
     public void setUpSuite() {
+
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
