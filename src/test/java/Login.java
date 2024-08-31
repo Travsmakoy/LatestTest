@@ -7,12 +7,12 @@ public class Login extends Methods{
         clickandsend(By.name("email"),"mark@admin.com");
         clickandsend(By.name("password"),"mark");
         click(By.xpath("//*[@id=\":r0:\"]"));
-        sleepThread(250);
+        sleepThread(500);
         URLvalidator("https://dashboard.aqaryint.com/dashboard/default");
     }
     @Test(priority = 1)
     public void verifyinlineEmail() throws InterruptedException {
-        click(By.xpath("//*[@id=\":r0:\"]"));
+        click(By.xpath("//button[normalize-space()=\"Sign In\"]"));
         InlineErrorValidator(By.xpath("//*[@id=\"standard-weight-helper-text-email-login\"]"),"Email Address / Username is Required");
     }
     @Test(priority = 2)

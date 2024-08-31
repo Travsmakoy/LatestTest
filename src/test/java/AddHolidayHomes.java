@@ -1,6 +1,7 @@
-import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
+import io.qameta.allure.Allure;
 
 public class AddHolidayHomes extends Methods{
 
@@ -12,7 +13,7 @@ public class AddHolidayHomes extends Methods{
     }
     @Test(priority = 2)
     public void addStay() throws InterruptedException {
-        Allure.story("As a user i can add Holiday Home Stay");
+    Allure.story("As a user i can add Holiday Home Stay");
     sleepThread(100);
     doubleClick(By.xpath("//input[@id='holidayHomeType']"),By.xpath("//li[@id='holidayHomeType-option-0']"));
     cleafield(By.xpath("//input[@id='en_title']"));
@@ -29,8 +30,8 @@ public class AddHolidayHomes extends Methods{
     click(By.xpath("//li[@id='stay_package-option-2']"));
 }
     @Test(priority = 3)
-public void addExp(){
-        Allure.story("As a user i can add Holiday Home Experience");
+    public void addExp(){
+    Allure.story("As a user i can add Holiday Home Experience");
     doubleClick(By.xpath("//input[@id='holidayHomeType']"),By.xpath("//li[@id='holidayHomeType-option-1']"));
     cleafield(By.xpath("//input[@id='en_title']"));
     clickandsend(By.xpath("//input[@id='en_title']"),"MarkAutomate");
@@ -54,5 +55,4 @@ public void addExp(){
         doubleClick(By.xpath("//input[@id='locationSubCommunity']"),By.xpath("//li[@id='locationSubCommunity-option-0']"));
         scrollPage(500);
     }
-
 }
