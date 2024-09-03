@@ -44,7 +44,6 @@ public class Methods {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator1)).click();
     }
     public void URLvalidator(String value){
-        String ExpectedURL = value;
         Assert.assertEquals(driver.getCurrentUrl(),value);
         Allure.step("You are in correct URL "+value);
     }
