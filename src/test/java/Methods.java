@@ -41,7 +41,10 @@ public class Methods {
     }
     public void doubleClick(By locator,By locator1){
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator1)).click();
+        WebElement click2 = wait.until(ExpectedConditions.visibilityOfElementLocated(locator1));
+        String holder2 = click2.getText();
+        click2.click();
+        Allure.step("Successfully Clicked "+ "'"+holder2+"'");
     }
     public void URLvalidator(String value){
         Assert.assertEquals(driver.getCurrentUrl(),value);
