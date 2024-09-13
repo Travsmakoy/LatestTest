@@ -21,7 +21,7 @@ public class AddPromotions extends Methods {
         click(By.xpath("//button[normalize-space()='Submit']"));
     }
     @Test(priority = 4)
-    public void verifyExistPromo(){
+    public void verifyExistPromo() throws InterruptedException {
         checkIfAdded(By.xpath("//*[@id=\"__next\"]/div/main/div/div[2]/div[2]/div/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[3]"),"MarkyAutomation");
     }
     @Test(priority = 5)

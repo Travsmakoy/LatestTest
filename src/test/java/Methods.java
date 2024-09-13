@@ -1,5 +1,6 @@
 import io.qameta.allure.Allure;
 import org.openqa.selenium.*;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +18,8 @@ public class Methods {
 
     @BeforeSuite
     public void setUpSuite() {
-        driver = new FirefoxDriver();
+        driver = new EdgeDriver();
+        driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
     @AfterSuite
@@ -33,7 +35,7 @@ public class Methods {
         WebElement click = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String button = click.getText();
         click.click();
-        Allure.step("Successfully Clicked "+ "'"+button+"'");;
+        Allure.step("Successfully Clicked "+ "'"+button+"'");
     }
     public void clickandsend(By locator, String value) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(value);
@@ -50,7 +52,8 @@ public class Methods {
         Assert.assertEquals(driver.getCurrentUrl(),value);
         Allure.step("You are in correct URL "+value);
     }
-    public void checkIfAdded(By locator, String value){
+    public void checkIfAdded(By locator, String value) throws InterruptedException {
+        sleepThread(200);
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         String actual = promoName.getText();
         Assert.assertEquals(actual,value);
