@@ -51,6 +51,9 @@ public class Methods {
         Assert.assertEquals(driver.getCurrentUrl(),value);
         Allure.step("You are in correct URL "+value);
     }
+    public void getUrl(String value){
+        driver.get(value);
+    }
     public void checkIfAdded(By locator, String value) throws InterruptedException {
         sleepThread(200);
         WebElement promoName = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
