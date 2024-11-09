@@ -16,7 +16,7 @@ public class AddHolidayHomes extends Methods{
     Allure.story("As a user i can add Holiday Home Stay");
     sleepThread(100);
     doubleClick(By.xpath("//input[@id='holidayHomeType']"),By.xpath("//li[@id='holidayHomeType-option-0']"));
-    cleafield(By.xpath("//input[@id='en_title']"));
+    clearfield(By.xpath("//input[@id='en_title']"));
     clickandsend(By.xpath("//input[@id='en_title']"),"MarkAutomate");
     doubleClick(By.xpath("//input[@id='stay_category']"),By.xpath("//li[@id='stay_category-option-0']"));
     clickandsend(By.xpath("//input[@id='no_of_room']"),"10");
@@ -25,7 +25,7 @@ public class AddHolidayHomes extends Methods{
     doubleClick(By.xpath("//input[@id='no_views']"),By.xpath("//li[@id='no_views-option-0']"));
     click(By.xpath("//li[@id='no_views-option-1']"));
     click(By.xpath("//li[@id='no_views-option-2']"));
-    doubleClick(By.xpath("//input[@id='stay_package']"),By.xpath("//li[@id='stay_package-option-0']"));
+    doubleClick(By.xpath("//input[@id=':R2ldala59uuul9vcq:']"),By.xpath("//li[@id=':R2ldala59uuul9vcq:-option-0']"));
     click(By.xpath("//li[@id='stay_package-option-1']"));
     click(By.xpath("//li[@id='stay_package-option-2']"));
 }
@@ -33,7 +33,7 @@ public class AddHolidayHomes extends Methods{
     public void addExp(){
     Allure.story("As a user i can add Holiday Home Experience");
     doubleClick(By.xpath("//input[@id='holidayHomeType']"),By.xpath("//li[@id='holidayHomeType-option-1']"));
-    cleafield(By.xpath("//input[@id='en_title']"));
+    clearfield(By.xpath("//input[@id='en_title']"));
     clickandsend(By.xpath("//input[@id='en_title']"),"MarkAutomate");
     doubleClick(By.xpath("//input[@id='experience_category']"),By.xpath("//li[@id='experience_category-option-0']"));
     click(By.xpath("//li[@id='experience_category-option-1']"));

@@ -83,7 +83,7 @@ public class Methods {
     public void sleepThread(int num) throws InterruptedException {
         Thread.sleep(num);
     }
-    public void cleafield(By locator){
+    public void clearfield(By locator){
         WebElement clear = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         clear.clear();
     }
